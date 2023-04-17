@@ -12,9 +12,10 @@ import Orders from './components/Orders/Orders';
 import Inventory from './components/Inventory/Inventory';
 import Login from './components/Login/Login';
 import cartLoader from './loader/cartLoader';
-import CheckOut from './components/CheckOut/CheckOut';
 import SignUp from './components/SignUp/SignUp';
 import AuthProviders from './components/Providers/AuthProviders';
+import PrivateRoute from './components/Routes/PrivateRoute';
+import CheckOut from './components/CheckOut/CheckOut';
 
 const router = createBrowserRouter([
   {
@@ -32,11 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path: 'inventory',
-        element: <Inventory></Inventory>
+        element: <PrivateRoute><Inventory></Inventory></PrivateRoute>
       },
       {
         path: 'checkout',
-        element: <CheckOut></CheckOut>
+        element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>
       },
       {
         path: 'login',

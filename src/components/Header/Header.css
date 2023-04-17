@@ -6,6 +6,9 @@
     align-items: center;
     padding-left: 100px;
     padding-right: 100px;
+    color: white;
+    position: sticky;
+    top: 0;
 }
 
 nav.header a{
@@ -16,4 +19,8 @@ nav.header a{
 }
 nav.header a:hover{
     color: greenyellow;
+}
+.text-white{
+    color: white;
+    padding: 5px;
 }
